@@ -13,6 +13,8 @@
 		2232A533243F94B800CD59BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2232A531243F94B800CD59BF /* Main.storyboard */; };
 		2232A535243F94BB00CD59BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2232A534243F94BB00CD59BF /* Assets.xcassets */; };
 		2232A538243F94BB00CD59BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2232A536243F94BB00CD59BF /* LaunchScreen.storyboard */; };
+		2232A541243F94DE00CD59BF /* SKScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2232A540243F94DE00CD59BF /* SKScrollView.swift */; };
+		2232A543243FA8B900CD59BF /* MyScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 2232A542243FA8B900CD59BF /* MyScene.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,9 @@
 		2232A534243F94BB00CD59BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2232A537243F94BB00CD59BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2232A539243F94BB00CD59BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2232A53F243F94BF00CD59BF /* SKScrollView.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SKScrollView.entitlements; sourceTree = "<group>"; };
+		2232A540243F94DE00CD59BF /* SKScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKScrollView.swift; sourceTree = "<group>"; };
+		2232A542243FA8B900CD59BF /* MyScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MyScene.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +61,12 @@
 		2232A52A243F94B800CD59BF /* SKScrollView */ = {
 			isa = PBXGroup;
 			children = (
+				2232A53F243F94BF00CD59BF /* SKScrollView.entitlements */,
 				2232A52B243F94B800CD59BF /* AppDelegate.swift */,
 				2232A52D243F94B800CD59BF /* SceneDelegate.swift */,
 				2232A52F243F94B800CD59BF /* ViewController.swift */,
+				2232A540243F94DE00CD59BF /* SKScrollView.swift */,
+				2232A542243FA8B900CD59BF /* MyScene.sks */,
 				2232A531243F94B800CD59BF /* Main.storyboard */,
 				2232A534243F94BB00CD59BF /* Assets.xcassets */,
 				2232A536243F94BB00CD59BF /* LaunchScreen.storyboard */,
@@ -127,6 +135,7 @@
 			files = (
 				2232A538243F94BB00CD59BF /* LaunchScreen.storyboard in Resources */,
 				2232A535243F94BB00CD59BF /* Assets.xcassets in Resources */,
+				2232A543243FA8B900CD59BF /* MyScene.sks in Resources */,
 				2232A533243F94B800CD59BF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2232A530243F94B800CD59BF /* ViewController.swift in Sources */,
+				2232A541243F94DE00CD59BF /* SKScrollView.swift in Sources */,
 				2232A52C243F94B800CD59BF /* AppDelegate.swift in Sources */,
 				2232A52E243F94B800CD59BF /* SceneDelegate.swift in Sources */,
 			);
@@ -284,6 +294,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SKScrollView/SKScrollView.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KQQQVH6Y8N;
 				INFOPLIST_FILE = SKScrollView/Info.plist;
@@ -293,8 +304,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tim.SKScrollView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -302,6 +314,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SKScrollView/SKScrollView.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KQQQVH6Y8N;
 				INFOPLIST_FILE = SKScrollView/Info.plist;
@@ -311,8 +324,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tim.SKScrollView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
