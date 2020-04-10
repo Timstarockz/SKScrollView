@@ -20,9 +20,7 @@ class SKScrollView: UIView {
 	
 	private(set) weak var scene: SKScene? = nil
 	private(set) var contentSize: CGSize = .zero
-	
-	private var overlayView: UIView!
-	
+		
 	// --
 	
 	init(frame: CGRect, contentSize: CGSize) {
@@ -33,7 +31,6 @@ class SKScrollView: UIView {
 		// init scroll view
 		scrollView = UIScrollView(frame: .zero)
 		scrollView.translatesAutoresizingMaskIntoConstraints = false
-		//scrollView.contentInset = UIEdgeInsets(top: 500, left: 500, bottom: 0, right: 0)
 		scrollView.contentSize = CGSize(width: contentSize.width, height: contentSize.height)
 		scrollView.clipsToBounds = true
 		scrollView.maximumZoomScale = 10.0
@@ -47,15 +44,6 @@ class SKScrollView: UIView {
 			scrollView.bottomAnchor.constraint(equalTo: bottomAnchor),
 			scrollView.rightAnchor.constraint(equalTo: rightAnchor)
 		])
-		
-		// init overlay view
-		/*overlayView = UIView(frame: .zero)
-		overlayView.translatesAutoresizingMaskIntoConstraints = false
-		scrollView.addSubview(overlayView)
-		NSLayoutConstraint.activate ([
-			overlayView.widthAnchor.constraint(equalToConstant: contentSize.width),
-			overlayView.heightAnchor.constraint(equalToConstant: contentSize.height)
-		])*/
 		
 		// init sk view
 		skView = SKView(frame: .zero)
@@ -101,16 +89,6 @@ class SKScrollView: UIView {
 	// MARK: - Layout
 	
 	override func layoutSubviews() {
-//		let contentOffset = scrollView.contentOffset
-//		let hdif = (contentSize.height/2)-(scrollView.bounds.size.height/2)
-//		let vdif = (contentSize.width/2)-(scrollView.bounds.size.width/2)
-//
-//		self.cameraNode.position = CGPoint(x: contentOffset.x - vdif, y: (contentOffset.y - hdif) * -1)
-		
-		//cameraNode.position = CGPoint(x: cameraNode.position.x+vdif, y: cameraNode.position.y+hdif)
-		//skView.frame = CGRect(x: (contentSize.width/2)-con, y: 0, width: contentSize.width, height: contentSize.height)
-		//skView.center = scrollView.center
-		//scrollView.contentInset = UIEdgeInsets(top: bounds.size.height-contentSize.height, left: bounds.size.width-contentSize.width, bottom: 0, right: 0)
 	}
 	
 }
